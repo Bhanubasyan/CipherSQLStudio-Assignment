@@ -18,7 +18,9 @@ app.use(express.json());
 app.use("/api",assignmentRoutes);
 app.use("/api", queryRoutes);
 app.use("/api", hintRoutes);
-
+app.get("/", (req, res) => {
+  res.send("CipherSQLStudio Backend is running ");
+});
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });
