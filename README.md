@@ -36,13 +36,16 @@ Database
 * PostgreSQL (Neon)
 
 ## 📂 Project Structure
+## 📁 Project Structure
 
 CipherSQLStudio
 │
 ├── frontend
-│   ├── components
-│   ├── pages
-│   ├── styles
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   └── styles
+│   │
 │   └── App.jsx
 │
 ├── backend
