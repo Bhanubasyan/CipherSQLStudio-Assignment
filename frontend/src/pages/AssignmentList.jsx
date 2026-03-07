@@ -8,12 +8,16 @@ function AssignmentList() {
 
   useEffect(() => {
 
-    fetch(`${API_URL}/api/assignments`)
-      .then((res) => res.json())
-      .then((data) => setAssignments(data))
-      .catch((err) => console.error(err));
+  fetch(`${API_URL}/api/assignments`)
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.success) {
+        setAssignments(data.data.assignments);
+      }
+    })
+    .catch((err) => console.error(err));
 
-  }, []);
+}, []);
 
   return (
     <div className="assignments-page">
