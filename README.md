@@ -75,7 +75,7 @@ npm install
 
 ### 3️⃣ Setup Environment Variables
 
-Create `.env` file in backend:
+Create .env file in backend:
 
 DATABASE_URL=your postgresql connection string
 
@@ -88,6 +88,14 @@ node server.js
 Frontend
 
 npm start
+
+## Query Flow Diagram
+
+![Query Flow](docs/query-flow-diagram.png)
+
+## Hint Flow Diagram
+
+![Hint Flow](docs/hint-flow-diagram.png)
 
 
 ## 📊 Example SQL Queries
