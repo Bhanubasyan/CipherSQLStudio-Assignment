@@ -91,7 +91,7 @@ npm start
 
 ## Query Flow Diagram
 
-![Query Flow](docs/query-flow-diagram.png)
+![Query Flow](docs/data-flow-diagram.png)
 
 ## Hint Flow Diagram
 
