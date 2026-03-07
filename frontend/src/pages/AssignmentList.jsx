@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AssignmentCard from "../components/AssignmentCard";
+const API_URL = "https://ciphersqlstudio-assignment.onrender.com";
 
 function AssignmentList() {
 
@@ -7,7 +8,7 @@ function AssignmentList() {
 
   useEffect(() => {
 
-    fetch("http://localhost:5000/api/assignments")
+    fetch(`${API_URL}/api/assignments`)
       .then((res) => res.json())
       .then((data) => setAssignments(data))
       .catch((err) => console.error(err));

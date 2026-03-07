@@ -5,7 +5,7 @@ import SQLEditor from "../components/SQLEditor";
 import ResultTable from "../components/ResultTable";
 import SampleTable from "../components/SampleTable";
 import HintBox from "../components/HintBox";
-
+const API_URL = "https://ciphersqlstudio-assignment.onrender.com";
 function AssignmentAttempt(){
 
   const { id } = useParams();
@@ -15,7 +15,7 @@ function AssignmentAttempt(){
 
   useEffect(()=>{
 
-    fetch(`http://localhost:5000/api/assignments/${id}`)
+    fetch(`${API_URL}/api/assignments/${id}`)
       .then(res=>res.json())
       .then(data=>setAssignment(data));
 

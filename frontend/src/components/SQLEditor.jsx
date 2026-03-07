@@ -1,6 +1,6 @@
 import Editor from "@monaco-editor/react";
 import { useState } from "react";
-
+const API_URL = "https://ciphersqlstudio-backend.onrender.com";
 function SQLEditor({ setResult }) {
 
   const [query, setQuery] = useState("SELECT * FROM employees;");
@@ -9,7 +9,7 @@ const runQuery = async () => {
 
   try {
 
-    const res = await fetch("http://localhost:5000/api/execute", {
+   const res = await fetch(`${API_URL}/api/execute`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
