@@ -5,6 +5,8 @@ import SQLEditor from "../components/SQLEditor";
 import ResultTable from "../components/ResultTable";
 import SampleTable from "../components/SampleTable";
 import HintBox from "../components/HintBox";
+import Sidebar from "../components/Sidebar";
+
 const API_URL = "https://ciphersqlstudio-assignment.onrender.com";
 function AssignmentAttempt(){
 
@@ -23,44 +25,52 @@ function AssignmentAttempt(){
 
   return(
 
-    <div className="assignment-page">
+   <div className="main-layout">
 
-     
-      <div className="question">
-        <h2>Question</h2>
+  <Sidebar />
+  <div className="assignment-container">
+
+    {/* LEFT PANEL */}
+    <div className="left-panel">
+
+      <div className="tabs">
+        <span className="active">Description</span>
+        <span>Solutions</span>
+        <span>Submissions</span>
+      </div>
+
+      <div className="question-section">
+        <h2>{assignment.title || "SQL Problem"}</h2>
         <p>{assignment.question}</p>
       </div>
 
-
-      <div className="workspace">
-
-       
-        <div className="sample">
-          <SampleTable/>
-        </div>
-
-
-      
-        <div className="editor">
-
-          <SQLEditor setResult={setResult}/>
-
-          <div className="editor-buttons">
-            <HintBox question={assignment.question}/>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div className="results">
-        <ResultTable result={result}/>
+      <div className="sample-section">
+        <SampleTable />
       </div>
 
     </div>
 
-  )
+    {/* RIGHT PANEL */}
+    <div className="right-panel">
+
+      <div className="editor-section">
+        <SQLEditor setResult={setResult} />
+
+        <div className="editor-footer">
+          <HintBox question={assignment.question} />
+        </div>
+      </div>
+
+      <div className="result-section">
+        <ResultTable result={result} />
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+);
+
 
 }
 

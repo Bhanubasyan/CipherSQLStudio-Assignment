@@ -7,15 +7,23 @@ function AssignmentCard({ assignment }) {
   return (
     <div className="assignment-card">
 
-      <h3>{assignment.title}</h3>
+      <div className="card-header">
+        <h3>{assignment.title}</h3>
+      </div>
 
-      <p>{assignment.description}</p>
+      <p className="card-desc">{assignment.description}</p>
 
-      <span>{assignment.difficulty}</span>
+      <div className="card-footer">
 
-      <button onClick={() => navigate(`/assignment/${assignment.id}`)}>
-        Attempt
-      </button>
+        <span className={`difficulty ${(assignment.difficulty || "easy").toLowerCase()}`}>
+          {assignment.difficulty}
+        </span>
+
+        <button onClick={() => navigate(`/assignment/${assignment.id}`)}>
+          Attempt
+        </button>
+
+      </div>
 
     </div>
   );
