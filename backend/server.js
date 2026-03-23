@@ -4,28 +4,27 @@ const cors = require("cors");
 
 const queryRoutes = require("./routes/queryRoutes");
 const hintRoutes = require("./routes/hintRoutes");
-const assignmentRoutes = require("./routes/assignmentRoutes");
+const assignmentRoutes =
+require("./routes/assignmentRoutes");
 
 const app = express();
 
 
-app.use(cors());
 
+app.use(cors({
+  origin: 'https://ciphersqlstudio-assignment-1.onrender.com',
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.use(express.json());
 
-// routes
-app.use("/api", assignmentRoutes);
+app.use("/api",assignmentRoutes);
 app.use("/api", queryRoutes);
 app.use("/api", hintRoutes);
-
 app.get("/", (req, res) => {
-  res.send("CipherSQLStudio Backend is running");
+  res.send("CipherSQLStudio Backend is running ");
 });
-
-//FIX PORT 
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
 });
