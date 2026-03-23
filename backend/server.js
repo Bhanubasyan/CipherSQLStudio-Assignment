@@ -9,15 +9,14 @@ require("./routes/assignmentRoutes");
 
 const app = express();
 
-app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://ciphersqlstudio-assignment-1.onrender.com"
-  ],
-  methods: ["GET", "POST"],
-  credentials: true
-}));
+const cors = require("cors");
 
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+app.options("*", cors());
 app.use(express.json());
 
 app.use("/api",assignmentRoutes);
