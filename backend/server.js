@@ -22,6 +22,8 @@ app.use(express.json());
 app.use("/api",assignmentRoutes);
 app.use("/api", queryRoutes);
 app.use("/api", hintRoutes);
+console.log("QueryRoutes loaded:", queryRoutes);
+console.log("HintRoutes loaded:", hintRoutes);
 app.get("/", (req, res) => {
   res.send("CipherSQLStudio Backend is running ");
 });
