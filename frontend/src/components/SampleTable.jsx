@@ -1,13 +1,12 @@
 import "../styles/main.scss";
-function SampleTable(){
 
-  return(
+function SampleTable() {
+  return (
+    <div className="sample-box">
 
-    <div>
+      <h3 className="sample-title">Sample Table: employees</h3>
 
-      <h3>Sample Table: employees</h3>
-
-      <table>
+      <table className="sample-table">
 
         <thead>
           <tr>
@@ -29,15 +28,12 @@ function SampleTable(){
             <td>Aman</td>
             <td>40000</td>
           </tr>
-
         </tbody>
 
       </table>
 
     </div>
-
-  )
-
+  );
 }
 
-export default SampleTable
+export default SampleTable;

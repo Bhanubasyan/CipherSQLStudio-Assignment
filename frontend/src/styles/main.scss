@@ -389,43 +389,62 @@ button:hover {
 
 .sample-box {
   background: #0d1b2a;
-  border: 1px solid #1f2a3a;
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  border-radius: 10px;
+}
 
-  .sample-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 12px;
+.sample-title {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.sample-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    background: #1b263b;
+    color: #00c6ff;
+    padding: 10px;
   }
 
-  .sample-table {
-    width: 100%;
-    border-collapse: collapse;
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #1f2a3a;
+    color: white;
+  }
 
-    th {
-      text-align: left;
-      padding: 12px;
-      background: #1b263b;
-      color: #00c6ff;
-      font-weight: 500;
-    }
+  tr:hover {
+    background: #1a2a40;
+  }
+}.sample-box {
+  background: #0d1b2a;
+  padding: 16px;
+  border-radius: 10px;
+}
 
-    td {
-      padding: 12px;
-      color: #d1d9e6;
-      border-bottom: 1px solid #1f2a3a;
-    }
+.sample-title {
+  color: white;
+  margin-bottom: 10px;
+}
 
-    tbody tr {
-      transition: 0.2s ease;
+.sample-table {
+  width: 100%;
+  border-collapse: collapse;
 
-      &:hover {
-        background: #1a2a40;
-      }
-    }
+  th {
+    background: #1b263b;
+    color: #00c6ff;
+    padding: 10px;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #1f2a3a;
+    color: white;
+  }
+
+  tr:hover {
+    background: #1a2a40;
   }
 }
