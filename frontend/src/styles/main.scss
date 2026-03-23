@@ -386,3 +386,54 @@ button:hover {
   align-items: center;
   gap: 10px;
 }
+
+/* Container */
+.sample-box {
+  background: #0d1b2a;
+  border: 1px solid #1f2a3a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.sample-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Table */
+.sample-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Header */
+.sample-table th {
+  text-align: left;
+  padding: 12px;
+  background: #1b263b;
+  color: #00c6ff;
+  font-weight: 500;
+}
+
+/* Rows */
+.sample-table td {
+  padding: 12px;
+  color: #d1d9e6;
+  border-bottom: 1px solid #1f2a3a;
+}
+
+/* Hover effect */
+.sample-table tbody tr:hover {
+  background: #1a2a40;
+  transition: 0.2s ease;
+}
+.sample-table td {
+  font-size: 14px;
+}
