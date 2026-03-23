@@ -14,6 +14,7 @@ app.use(cors({
     "http://localhost:3000",
     "https://ciphersqlstudio-assignment-1.onrender.com"
   ],
+  methods: ["GET", "POST"],
   credentials: true
 }));
 
