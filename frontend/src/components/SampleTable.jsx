@@ -1,3 +1,4 @@
+import "../styles/main.scss";
 function SampleTable(){
 
   return(
