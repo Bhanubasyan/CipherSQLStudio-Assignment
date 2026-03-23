@@ -1,7 +1,7 @@
 import Editor from "@monaco-editor/react";
 import { useState } from "react";
 
-const API_URL = "https://ciphersqlstudio-backend.onrender.com";
+const API_URL = "https://ciphersqlstudio-assignment.onrender.com";
 
 function SQLEditor({ setResult }) {
 

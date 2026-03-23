@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API_URL = "https://ciphersqlstudio-backend.onrender.com";
+const API_URL = "https://ciphersqlstudio-assignment.onrender.com";
 
 function HintBox({ question }) {
 
